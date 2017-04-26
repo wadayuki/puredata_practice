@@ -1,0 +1,13 @@
+#N canvas -8 -8 1440 817 10;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array snd 56840 float 2;
+#X coords 0 1 56840 -1 200 140 1;
+#X restore 244 288 graph;
+#X obj 266 79 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 267 111 openpanel;
+#X msg 266 146 read -resize \$1 snd;
+#X obj 267 187 soundfiler;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
