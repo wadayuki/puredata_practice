@@ -1,13 +1,13 @@
-#N canvas -27 0 1440 801 10;
+#N canvas 129 0 1440 801 10;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array snd 2301 float 2;
 #X coords 0 1 2301 -1 200 140 1;
 #X restore 901 605 graph;
-#X obj 899 411 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 1008 412 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 900 443 openpanel;
-#X msg 899 478 read -resize \$1 snd;
-#X obj 900 519 soundfiler;
+#X obj 1009 444 openpanel;
+#X msg 1008 479 read -resize \$1 snd;
+#X obj 1009 520 soundfiler;
 #X obj 413 582 tabplay~ snd;
 #X obj 406 637 dac~;
 #X obj 608 80 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
@@ -17,7 +17,7 @@
 #X array popo 16 float 1;
 #A 0 1 0 1 0 1 0 0 0 1 0 0 0 1 0 0 0;
 #X coords 0 1 15 0 255 10 1 0 0;
-#X restore 647 194 graph;
+#X restore 648 194 graph;
 #X obj 782 415 unpack 0 0;
 #X msg 1203 534;
 #X floatatom 782 468 5 0 0 0 - - -;
