@@ -1,9 +1,9 @@
 #N canvas 0 0 1440 817 10;
 #X obj 531 715 dac~;
-#X obj 263 180 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 263 180 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X floatatom 417 404 5 0 0 0 - - -;
-#X obj 412 144 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 412 144 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 415 234 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -4707,7 +4707,7 @@
 1;
 #X obj 224 74 tgl 15 0 empty empty empty 17 7 0 10 -258113 -1 -1 0
 1;
-#X obj 240 74 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 240 74 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 255 74 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -4717,7 +4717,7 @@
 1;
 #X obj 303 74 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 225 385 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 225 385 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 335 74 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -4800,10 +4800,10 @@
 #X obj 398 532 tabplay~ bass_drum;
 #X obj 528 530 tabplay~ hi_hat;
 #X floatatom 688 562 5 0 0 0 - - -;
-#X obj 804 437 vsl 15 128 0 10000 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+#X obj 804 437 vsl 15 128 0 5000 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 1000 1;
 #X obj 873 480 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 10100 1;
+-1 -1 10800 1;
 #X floatatom 637 620 5 0 0 0 - - -;
 #X msg 436 80 60000;
 #X floatatom 521 71 5 0 0 0 - - -;
