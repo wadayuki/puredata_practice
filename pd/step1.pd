@@ -1,80 +1,9 @@
-#N canvas 129 0 1440 801 10;
-#N canvas 0 0 450 300 (subpatch) 0;
-#X array snd 2301 float 2;
-#X coords 0 1 2301 -1 200 140 1;
-#X restore 901 605 graph;
-#X obj 1008 412 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 1009 444 openpanel;
-#X msg 1008 479 read -resize \$1 snd;
-#X obj 1009 520 soundfiler;
+#N canvas -8 -8 1440 817 10;
 #X obj 413 582 tabplay~ snd;
 #X obj 406 637 dac~;
-#X obj 608 80 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 263 180 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X msg 608 116 \; pd dsp \$1;
-#N canvas 0 0 450 300 (subpatch) 0;
-#X array popo 16 float 1;
-#A 0 1 0 1 0 1 0 0 0 1 0 0 0 1 0 0 0;
-#X coords 0 1 15 0 255 10 1 0 0;
-#X restore 648 194 graph;
-#X obj 782 415 unpack 0 0;
-#X msg 1203 534;
-#X floatatom 782 468 5 0 0 0 - - -;
-#X floatatom 835 467 5 0 0 0 - - -;
-#X obj 770 566 tabwrite popo;
-#X obj 650 204 tgl 15 0 empty empty empty 17 7 0 10 -258113 -1 -1 1
-1;
-#X msg 698 328 \$1 5;
-#X obj 744 205 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 712 205 tgl 15 0 empty empty empty 17 7 0 10 -258113 -1 -1 1
-1;
-#X obj 728 205 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 696 205 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 664 205 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 680 205 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
-#X obj 760 205 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 776 205 tgl 15 0 empty empty empty 17 7 0 10 -258113 -1 -1 1
-1;
-#X obj 792 205 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 807 205 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 823 205 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 839 205 tgl 15 0 empty empty empty 17 7 0 10 -258113 -1 -1 1
-1;
-#X obj 855 205 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 1065 229 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
-#X obj 777 516 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
-#X obj 887 205 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 871 205 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X msg 620 288 \$1 0;
-#X msg 616 327 \$1 1;
-#X msg 659 288 \$1 2;
-#X msg 655 328 \$1 3;
-#X msg 698 289 \$1 4;
-#X msg 729 291 \$1 6;
-#X msg 736 327 \$1 7;
-#X msg 766 291 \$1 8;
-#X msg 777 326 \$1 9;
-#X msg 807 290 \$1 10;
-#X msg 820 326 \$1 11;
-#X msg 856 290 \$1 12;
-#X msg 867 325 \$1 13;
-#X msg 905 291 \$1 14;
-#X msg 913 322 \$1 15;
+#X msg 263 216 \; pd dsp \$1;
 #X obj 414 360 tabread popo;
 #X floatatom 417 404 5 0 0 0 - - -;
 #X obj 412 144 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
@@ -88,56 +17,242 @@
 #X obj 418 492 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X floatatom 466 160 5 0 0 0 - - -;
-#X connect 1 0 2 0;
+#N canvas 289 276 713 326 bassdrum 0;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array snd 3953 float 2;
+#X coords 0 1 3953 -1 200 140 1;
+#X restore 1 233 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array popo 16 float 1;
+#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+#X coords 0 1 15 0 255 10 1 0 0;
+#X restore 88 14 graph;
+#X obj 222 235 unpack 0 0;
+#X floatatom 222 288 5 0 0 0 - - -;
+#X floatatom 275 287 5 0 0 0 - - -;
+#X obj 210 386 tabwrite popo;
+#X obj 88 25 tgl 15 0 empty empty empty 17 7 0 10 -258113 -1 -1 0 1
+;
+#X msg 138 148 \$1 5;
+#X obj 184 25 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 152 25 tgl 15 0 empty empty empty 17 7 0 10 -258113 -1 -1 0
+1;
+#X obj 168 25 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 136 25 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 104 25 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 120 25 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 200 25 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 216 25 tgl 15 0 empty empty empty 17 7 0 10 -258113 -1 -1 0
+1;
+#X obj 232 25 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 247 25 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 263 25 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 279 25 tgl 15 0 empty empty empty 17 7 0 10 -258113 -1 -1 0
+1;
+#X obj 295 25 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 217 336 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 327 25 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 311 25 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 56 147 \$1 1;
+#X msg 99 108 \$1 2;
+#X msg 95 148 \$1 3;
+#X msg 138 109 \$1 4;
+#X msg 169 111 \$1 6;
+#X msg 176 147 \$1 7;
+#X msg 206 111 \$1 8;
+#X msg 217 146 \$1 9;
+#X msg 247 110 \$1 10;
+#X msg 260 146 \$1 11;
+#X msg 296 110 \$1 12;
+#X msg 307 145 \$1 13;
+#X msg 345 111 \$1 14;
+#X msg 353 142 \$1 15;
+#X msg 60 108 \$1 0;
+#X obj 371 244 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 372 276 openpanel;
+#X obj 372 352 soundfiler;
+#X msg 371 310 read -resize \$2 snd;
 #X connect 2 0 3 0;
-#X connect 3 0 4 0;
-#X connect 5 0 6 0;
-#X connect 5 0 6 1;
+#X connect 2 1 4 0;
+#X connect 3 0 21 0;
+#X connect 4 0 5 1;
+#X connect 6 0 38 0;
+#X connect 7 0 2 0;
+#X connect 8 0 28 0;
+#X connect 9 0 27 0;
+#X connect 10 0 7 0;
+#X connect 11 0 26 0;
+#X connect 12 0 24 0;
+#X connect 13 0 25 0;
+#X connect 14 0 29 0;
+#X connect 15 0 30 0;
+#X connect 16 0 31 0;
+#X connect 17 0 32 0;
+#X connect 18 0 33 0;
+#X connect 19 0 34 0;
+#X connect 20 0 35 0;
+#X connect 21 0 5 0;
+#X connect 22 0 37 0;
+#X connect 23 0 36 0;
+#X connect 24 0 2 0;
+#X connect 25 0 2 0;
+#X connect 26 0 2 0;
+#X connect 27 0 2 0;
+#X connect 28 0 2 0;
+#X connect 29 0 2 0;
+#X connect 30 0 2 0;
+#X connect 31 0 2 0;
+#X connect 32 0 2 0;
+#X connect 33 0 2 0;
+#X connect 34 0 2 0;
+#X connect 35 0 2 0;
+#X connect 36 0 2 0;
+#X connect 37 0 2 0;
+#X connect 38 0 2 0;
+#X connect 39 0 40 0;
+#X connect 40 0 42 0;
+#X connect 42 0 41 0;
+#X coords 0 0 1 200 260 50 1 80 0;
+#X restore 789 247 pd bassdrum;
+#X text 388 433 bass;
+#X obj 509 359 tabread hat;
+#X obj 630 359 tabread snare;
+#N canvas 845 242 450 300 hat 1;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array snd 2301 float 2;
+#X coords 0 1 2301 -1 200 140 1;
+#X restore 11 242 graph;
+#X obj 232 245 unpack 0 0;
+#X floatatom 232 298 5 0 0 0 - - -;
+#X floatatom 285 297 5 0 0 0 - - -;
+#X obj 98 35 tgl 15 0 empty empty empty 17 7 0 10 -258113 -1 -1 0 1
+;
+#X msg 148 158 \$1 5;
+#X obj 194 35 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 162 35 tgl 15 0 empty empty empty 17 7 0 10 -258113 -1 -1 0
+1;
+#X obj 178 35 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 146 35 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 114 35 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 130 35 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 210 35 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 226 35 tgl 15 0 empty empty empty 17 7 0 10 -258113 -1 -1 0
+1;
+#X obj 242 35 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 257 35 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 273 35 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 289 35 tgl 15 0 empty empty empty 17 7 0 10 -258113 -1 -1 0
+1;
+#X obj 305 35 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 227 346 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 337 35 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 321 35 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 66 157 \$1 1;
+#X msg 109 118 \$1 2;
+#X msg 105 158 \$1 3;
+#X msg 148 119 \$1 4;
+#X msg 179 121 \$1 6;
+#X msg 186 157 \$1 7;
+#X msg 216 121 \$1 8;
+#X msg 227 156 \$1 9;
+#X msg 257 120 \$1 10;
+#X msg 270 156 \$1 11;
+#X msg 306 120 \$1 12;
+#X msg 317 155 \$1 13;
+#X msg 355 121 \$1 14;
+#X msg 363 152 \$1 15;
+#X msg 70 118 \$1 0;
+#X obj 381 254 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 382 286 openpanel;
+#X msg 381 321 read -resize \$1 snd;
+#X obj 382 362 soundfiler;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array hat 16 float 1;
+#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+#X coords 0 1 15 0 255 10 1 0 0;
+#X restore 97 23 graph;
+#X obj 221 396 tabwrite hat;
+#X connect 1 0 2 0;
+#X connect 1 1 3 0;
+#X connect 2 0 19 0;
+#X connect 3 0 42 1;
+#X connect 4 0 36 0;
+#X connect 5 0 1 0;
+#X connect 6 0 26 0;
+#X connect 7 0 25 0;
+#X connect 8 0 5 0;
+#X connect 9 0 24 0;
+#X connect 10 0 22 0;
+#X connect 11 0 23 0;
+#X connect 12 0 27 0;
+#X connect 13 0 28 0;
+#X connect 14 0 29 0;
+#X connect 15 0 30 0;
+#X connect 16 0 31 0;
+#X connect 17 0 32 0;
+#X connect 18 0 33 0;
+#X connect 19 0 42 0;
+#X connect 20 0 35 0;
+#X connect 21 0 34 0;
+#X connect 22 0 1 0;
+#X connect 23 0 1 0;
+#X connect 24 0 1 0;
+#X connect 25 0 1 0;
+#X connect 26 0 1 0;
+#X connect 27 0 1 0;
+#X connect 28 0 1 0;
+#X connect 29 0 1 0;
+#X connect 30 0 1 0;
+#X connect 31 0 1 0;
+#X connect 32 0 1 0;
+#X connect 33 0 1 0;
+#X connect 34 0 1 0;
+#X connect 35 0 1 0;
+#X connect 36 0 1 0;
+#X connect 37 0 38 0;
+#X connect 38 0 39 0;
+#X connect 39 0 40 0;
+#X restore 668 146 pd hat;
+#X connect 0 0 1 0;
+#X connect 0 0 1 1;
+#X connect 2 0 3 0;
+#X connect 4 0 5 0;
+#X connect 5 0 11 0;
+#X connect 6 0 7 0;
 #X connect 7 0 8 0;
-#X connect 10 0 12 0;
-#X connect 10 1 13 0;
-#X connect 12 0 31 0;
-#X connect 13 0 14 1;
-#X connect 15 0 34 0;
-#X connect 16 0 10 0;
-#X connect 17 0 39 0;
-#X connect 18 0 38 0;
-#X connect 19 0 16 0;
-#X connect 20 0 37 0;
-#X connect 21 0 35 0;
-#X connect 22 0 36 0;
-#X connect 23 0 40 0;
-#X connect 24 0 41 0;
-#X connect 25 0 42 0;
-#X connect 26 0 43 0;
-#X connect 27 0 44 0;
-#X connect 28 0 45 0;
-#X connect 29 0 46 0;
-#X connect 31 0 14 0;
-#X connect 32 0 48 0;
-#X connect 33 0 47 0;
-#X connect 34 0 10 0;
-#X connect 35 0 10 0;
-#X connect 36 0 10 0;
-#X connect 37 0 10 0;
-#X connect 38 0 10 0;
-#X connect 39 0 10 0;
-#X connect 40 0 10 0;
-#X connect 41 0 10 0;
-#X connect 42 0 10 0;
-#X connect 43 0 10 0;
-#X connect 44 0 10 0;
-#X connect 45 0 10 0;
-#X connect 46 0 10 0;
-#X connect 47 0 10 0;
-#X connect 48 0 10 0;
-#X connect 49 0 50 0;
-#X connect 50 0 56 0;
-#X connect 51 0 52 0;
-#X connect 52 0 53 0;
-#X connect 53 0 54 0;
-#X connect 54 0 55 0;
-#X connect 55 0 49 0;
-#X connect 56 0 57 0;
-#X connect 57 0 5 0;
-#X connect 58 0 52 1;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 4 0;
+#X connect 10 0 16 0;
+#X connect 10 0 17 0;
+#X connect 11 0 12 0;
+#X connect 12 0 0 0;
+#X connect 13 0 7 1;
